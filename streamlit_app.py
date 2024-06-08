@@ -14,7 +14,6 @@ end = st.date_input("End")
 billing = st.selectbox("Billing", options=["Yearly", "Half Yearly", "Quarterly", "Monthly"])
 
 if billing == "Yearly":
-    st.text(billing)
     data2 = {
         "Subject":[(clientName+" "+ amcfms + " "+ type+ " "+ billing),
         (clientName+" "+ amcfms + " "+ type+ " "+ billing),
@@ -53,7 +52,7 @@ if billing == "Yearly":
     
 
 elif billing == "Half Yearly":
-    st.text(billing)
+    
     data2 = {
         "Subject":[(clientName+" "+ amcfms + " "+ type+ " "+ billing),
         (clientName+" "+ amcfms + " "+ type+ " "+ billing),
@@ -125,7 +124,7 @@ elif billing == "Half Yearly":
     }
     
 elif billing == "Quarterly":
-    st.text(billing)
+    
     data2 = {
         "Subject":[(clientName+" "+ amcfms + " "+ type+ " "+ billing),
         (clientName+" "+ amcfms + " "+ type+ " "+ billing),
@@ -261,7 +260,7 @@ elif billing == "Quarterly":
     }
     
 else:
-    st.text(billing)
+    
     data2 = {
         "Subject":[(clientName+" "+ amcfms + " "+ type+ " "+ billing),
         (clientName+" "+ amcfms + " "+ type+ " "+ billing),
@@ -714,7 +713,7 @@ st.download_button(
 
 if st.button("Save"):
     if billing == "Yearly":
-        st.text(billing)
+        
         data = {
             "Client Name":[clientName],
             "AMC/FMS":[amcfms],
@@ -728,7 +727,7 @@ if st.button("Save"):
         df=pd.DataFrame(data)
         st.dataframe(df)
     elif billing == "Half Yearly":
-        st.text(billing)
+        
         data = {
             "Client Name":[clientName],
             "AMC/FMS":[amcfms],
@@ -746,7 +745,7 @@ if st.button("Save"):
         df=pd.DataFrame(data)
         st.dataframe(df)
     elif billing == "Quarterly":
-        st.text(billing)
+        
         data = {
             "Client Name":[clientName],
             "AMC/FMS":[amcfms],
@@ -769,7 +768,7 @@ if st.button("Save"):
         df=pd.DataFrame(data)
         st.dataframe(df)
     else:
-        st.text(billing)
+        
         data = {
             "Client Name":[clientName],
             "AMC/FMS":[amcfms],
