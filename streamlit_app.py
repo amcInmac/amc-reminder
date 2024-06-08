@@ -260,7 +260,7 @@ elif billing == "Quarterly":
     }
     
 else:
-    
+    st.text(billing)
     data2 = {
         "Subject":[(clientName+" "+ amcfms + " "+ type+ " "+ billing),
         (clientName+" "+ amcfms + " "+ type+ " "+ billing),
@@ -691,7 +691,7 @@ else:
         "5:00 PM",]
     }
 
-df2 = pd.DataFrame(data2)   
+df2 = pd.DataFrame(data2)  
 
 st.download_button(
    "Press to Download",
