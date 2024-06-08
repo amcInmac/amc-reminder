@@ -793,3 +793,4 @@ if st.button("Save"):
         }
         df=pd.DataFrame(data)
         st.dataframe(df)
+st.link_button("Go to Calendars", "https://calendar.google.com/calendar/u/0/r/settings/export?pli=1")
